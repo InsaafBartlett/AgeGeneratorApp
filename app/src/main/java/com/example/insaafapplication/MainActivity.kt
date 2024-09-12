@@ -24,7 +24,7 @@ class MainActivity : AppCompatActivity() {
         etextview = findViewById(R.id.textShow)
         cleartextbutton = findViewById(R.id.buttonClearText)
 
-        val agelimit = 110
+        val agelimit = 100
 
         //onclick button
         ebutton.setOnClickListener {
@@ -37,14 +37,14 @@ class MainActivity : AppCompatActivity() {
                 val value = getAge.toInt()
 
                 if (value > agelimit) {
-                    etextview.text =
-                        "You are almost the age of the oldest person to die in the world Jeanne Louise Calment who died at the age of 122."
-                } else
-                    etextview.text = "No Famous Figures died at this age."
+                    Toast.makeText(this, "Please type in a valid age", Toast.LENGTH_SHORT)
+                        .show()
+                }
 
-            } else
 
-            Toast.makeText(this,"Please Enter a valid age.", Toast.LENGTH_SHORT).show()
+
+
+            }
 
 <<<<<<< HEAD
 
@@ -136,8 +136,7 @@ class MainActivity : AppCompatActivity() {
                     "You are the same age as John.B.Goodenough.He was a physicist. He was the inventor of the Litium-ion battery."
 
                 else -> {
-                    Toast.makeText(this, "Please type something in textfield", Toast.LENGTH_SHORT)
-                        .show()
+                    etextview.text = "No Famous Figures died at this age."
                 }
 
 
